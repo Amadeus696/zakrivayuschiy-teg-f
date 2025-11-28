@@ -87,7 +87,6 @@
 
 .card_img_setting {
   object-fit: cover;
-  inline-size: 100%;
   aspect-ratio: 1/1;
   inline-size: 100%;
   block-size: 100%;
@@ -106,6 +105,14 @@
     0 1px var(--Main-Bg-Color),
     1px 0 var(--Main-Bg-Color),
     0 -1px var(--Main-Bg-Color);
+}
+
+@supports ((text-stroke: 1px var(--Border-Color)) or (-webkit-text-stroke: 1px var(--Border-Color))) {
+  .decor_img_card {
+    -webkit-text-stroke: 1px var(--Main-Bg-Color);
+    text-stroke: 1px var(--Main-Bg-Color);
+    text-shadow: none;
+  }
 }
 
 .card_text {
